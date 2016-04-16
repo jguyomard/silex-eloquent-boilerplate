@@ -7,7 +7,7 @@ $app['controllers']->convert('article', function ($id) use ($app) {
     if (empty($id) || !ctype_digit($id)) {
         return null;
     }
-    return $app['repository.article']->find($id);
+    return \Blog\Model\ArticleModel::find($id);
 });
 
 $app->get('/',              '\Blog\Controller\BlogController::indexAction')

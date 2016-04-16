@@ -1,6 +1,6 @@
 {
-    "name": "jguyomard/silex-pdo-boilerplate",
-    "description": "A Boilerplate for Silex 2 using PDO",
+    "name": "jguyomard/silex-eloquent-boilerplate",
+    "description": "A Boilerplate for Silex 2 using Eloquent ORM",
     "license": "MIT",
     "authors": [
         {
@@ -13,7 +13,7 @@
         "symfony/config": "^3.0",
         "symfony/twig-bridge": "~2.7|3.0.*",
         "symfony/monolog-bridge": "~2.7|3.0.*",
-        "csanquer/pdo-service-provider": "~1.1@dev",
+        "jguyomard/silex-capsule-eloquent": "~2.0@dev",
         "jeromemacias/silex-debug": "~2.0@dev"
     },
     "autoload": {
@@ -22,5 +22,6 @@
     "require-dev": {
         "symfony/browser-kit": "^3.0",
         "symfony/css-selector": "^3.0"
-    }
+    },
+    "minimum-stability": "dev"
 }

@@ -9,7 +9,7 @@
                 <ul class="articles">
                     {% for article in articles %}
                         {# or {{ path('article', {article: article.id}) }} ; see http://silex.sensiolabs.org/doc/providers/twig.html#symfony-components-integration #}
-                        <li><a href="{{ article.getUrl() }}">{{ article.getTitle }}</a></li>
+                        <li><a href="{{ article.getUrl() }}">{{ article.article_title }}</a></li>
                     {% endfor %}
                 </ul>
             </div>

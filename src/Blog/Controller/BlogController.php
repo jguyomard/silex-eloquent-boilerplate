@@ -2,6 +2,7 @@
 
 namespace Blog\Controller;
 
+use Blog\Model\ArticleModel;
 use Silex\Application;
 use Symfony\Component\HttpFoundation\Request;
 
@@ -9,7 +10,7 @@ class BlogController
 {
     public function indexAction(Application $app)
     {
-        $articles = $app['repository.article']->findAll($app['app.blog']['articlesPerPage']);
+        $articles = ArticleModel::take($app['app.blog']['articlesPerPage'])->get();
         dump($articles);
 
         return $app['twig']->render('@Blog/article-list.html.twig', [
@@ -31,8 +32,12 @@ class BlogController
 
     public function apiAction(Request $request, Application $app)
     {
+        $article = new ArticleModel();
+        $article->article_title = 'Add';
+        $article->save();
+
         return $app->json([
-            'foo' => 'bar',
+            'add' => $article->article_id,
         ]);
     }
 }

@@ -2,15 +2,16 @@
 
 require __DIR__.'/prod.config.php';
 
-$app['pdo.server'] = [
-    'driver' => 'mysql',
-    'host' => 'localhost',
-    'dbname' => 'silex_boilerplate',
-    'port' => 3306,
-    'user' => 'root',
-    'password' => 'root',
+// Eloquent
+$app['capsule.connections'] = [
+    'default' => [
+        'username' => 'root',
+        'password' => 'root',
+        'database' => 'silex_boilerplate',
+    ]
 ];
 
+// Twig
 $app['twig.options'] = array_merge($app['twig.options'], [
     'cache' => false,
     'debug' => true,
