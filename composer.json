@@ -22,6 +22,5 @@
     "require-dev": {
         "symfony/browser-kit": "^3.0",
         "symfony/css-selector": "^3.0"
-    },
-    "minimum-stability": "dev"
+    }
 }
