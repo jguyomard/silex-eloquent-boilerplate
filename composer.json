@@ -27,6 +27,5 @@
         "branch-alias": {
             "dev-master/gulp": "2.0.x-dev"
         }
-    },
-    "minimum-stability": "dev"
+    }
 }
