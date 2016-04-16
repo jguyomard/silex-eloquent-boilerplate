@@ -6,17 +6,10 @@
 /*
  * Register Service Providers
  */
-$app->register(new Csanquer\Silex\PdoServiceProvider\Provider\PDOServiceProvider('pdo'));
+$app->register(new \JG\Silex\Provider\CapsuleServiceProvider());
 $app->register(new Silex\Provider\ServiceControllerServiceProvider());
 $app->register(new Silex\Provider\TwigServiceProvider());
 $app->register(new Silex\Provider\HttpFragmentServiceProvider());
-
-/*
- * Register Repositories
- */
-$app['repository.article'] = function ($app) {
-    return new \Blog\Repository\ArticleRepository($app['pdo']);
-};
 
 /*
  * Extend Twig and Register views paths

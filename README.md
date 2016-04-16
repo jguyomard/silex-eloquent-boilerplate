@@ -1,9 +1,9 @@
-# Silex 2 with PDO - Boilerplate
+# Silex 2 with Eloquent - Boilerplate
 
 This boilerplate is a fully functional [Silex](http://silex.sensiolabs.org/) Application. You can use it for your new applications.
 
-This boilerplate is configured with PDO Service Provider (instead of Doctrine, for instance) and Twig.
-It also comes with Gulp to build js/sass files (but you can find a version without gulp on [`master/no-npm`](https://github.com/jguyomard/silex-pdo-boilerplate/tree/master/no-npm) branch if you prefer).
+This boilerplate is configured with Eloquent ORM Service Provider (instead of Doctrine, for instance) and Twig.
+It also comes with Gulp to build js/sass files (but you can find a version without gulp on [`master/no-npm`](https://github.com/jguyomard/silex-eloquent-boilerplate/tree/master/no-npm) branch if you prefer).
 
 
 **Note:** I only make this boilerplate for my quick and fun projects.
@@ -19,7 +19,7 @@ Config is in `./config` directory.
 ## Creating a new Silex Application
 
 ```
-composer create-project jguyomard/silex-pdo-boilerplate ./myapp 2.0.x-dev
+composer create-project jguyomard/silex-eloquent-boilerplate ./myapp 2.0.x-dev
 cd ./myapp
 ```
 
@@ -48,7 +48,7 @@ This Silex Boilerplate is configured with:
 
 ### Service Providers
 
-* [PDOServiceProvider](https://github.com/csanquer/PdoServiceProvider) (~1.1@dev)
+* [CapsuleServiceProvider](http://github.com/jguyomard/silex-capsule-eloquent/) (~2.0@dev)
 * [TwigServiceProvider](http://silex.sensiolabs.org/doc/providers/twig.html)
 * [UrlGeneratorServiceProvider](http://silex.sensiolabs.org/doc/providers/url_generator.html)
 * [ServiceControllerServiceProvider](http://silex.sensiolabs.org/doc/providers/service_controller.html)
@@ -87,10 +87,10 @@ phpunit
 
 ## Issues
 
-If you have any problems with or questions about this boilerplate, please contact me through a [GitHub issue](https://github.com/jguyomard/silex-pdo-boilerplate/issues).
+If you have any problems with or questions about this boilerplate, please contact me through a [GitHub issue](https://github.com/jguyomard/silex-eloquent-boilerplate/issues).
 If the issue is related to Silex itself, or any configured packages, please leave an issue on their official repository.
 
 
 ## Contributing
 
-You are invited to contribute new features, fixes or updates to this container, through a [Github Pull Request](https://github.com/jguyomard/silex-pdo-boilerplate/pulls).
+You are invited to contribute new features, fixes or updates to this container, through a [Github Pull Request](https://github.com/jguyomard/silex-eloquent-boilerplate/pulls).
