@@ -4,7 +4,8 @@ namespace Blog\Model;
 
 use Illuminate\Database\Eloquent\Model;
 
-class ArticleModel extends Model {
+class ArticleModel extends Model
+{
     protected $table = 'article';
 
     protected $primaryKey = 'article_id';

@@ -8,7 +8,7 @@ $app['capsule.connections'] = [
         'username' => 'root',
         'password' => 'root',
         'database' => 'silex_boilerplate',
-    ]
+    ],
 ];
 
 // Twig
