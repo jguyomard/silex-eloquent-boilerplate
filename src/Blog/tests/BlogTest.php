@@ -40,13 +40,15 @@ class BlogTest extends WebTestCase
 
         // Load DB ?
         $ciEnv = array_filter([
-            'user' => getenv('DB_USER'),
+            'username' => getenv('DB_USER'),
             'password' => getenv('DB_PASS'),
-            'dbname' => getenv('DB_BASE'),
+            'database' => getenv('DB_BASE'),
         ], 'is_string');
         if (!empty($ciEnv)) {
-            $app['pdo.server'] = array_merge($app['pdo.server'], $ciEnv);
-            $app['pdo']->exec(file_get_contents(ROOT.'/boilerplate.sql'));
+            $connections = $app['capsule.connections']; // Indirect modification of overloaded element
+            $connections['default'] = array_merge($connections['default'], $ciEnv);
+            $app['capsule.connections'] = $connections;
+            $app['capsule']->getConnection()->getPdo()->exec(file_get_contents(ROOT.'/boilerplate.sql'));
         }
 
         unset($app['exception_handler']);
